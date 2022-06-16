@@ -1,0 +1,13 @@
+.end {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
+    color: white;
+}
+
+.end h1 {
+    font-size: 4rem;
+}
