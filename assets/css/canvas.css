@@ -35,6 +35,24 @@
     z-index: 100;
 }
 
+.score-board {
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    display: none;
+}
+
+#tryAgain>a {
+    color: green;
+    text-decoration: none;
+}
+
+#tryAgain>a:hover {
+    transform: scale(1.01);
+}
+
 @keyframes baseAnimate {
     from {
         background-position: 0 100%, 0 0;

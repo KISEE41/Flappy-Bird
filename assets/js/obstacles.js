@@ -46,6 +46,9 @@ class Obstacle {
             this.topPipe.remove();
             this.downPipe.remove();
             this.position = 0;
+            score += 1;
+            scoreBoard[0].innerHTML = `${score}`;
+            console.log(score);
         }
         this.topPipe.style.right = `${toPer(this.position)}`;
         this.downPipe.style.right = `${toPer(this.position)}`;

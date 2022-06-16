@@ -6,8 +6,13 @@
     display: none;
     z-index: 1000;
     color: white;
+    text-align: center;
 }
 
 .end h1 {
     font-size: 4rem;
+}
+
+.end h2 {
+    font-size: 3rem;
 }

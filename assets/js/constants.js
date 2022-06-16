@@ -14,6 +14,11 @@ const maxHeightOfPipe = 250;
 const viewPortWidth = 864;
 const viewPortHeight = 512;
 
+const scoreBoard = document.getElementsByClassName("score");
+const highestScoreBoard = document.getElementById("highestScore");
+
 var isStarted = false;
 
 var score = 0;
+var finalScore = 0;
+var highestScore = 0;

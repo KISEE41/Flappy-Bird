@@ -4,6 +4,14 @@ function collide() {
     const downPipes = document.getElementsByClassName("down-pipe");
 
     document.getElementsByClassName("end")[0].style.display = "block";
+    document.getElementsByClassName("score-board")[0].style.display = "none";
+
+    finalScore = score;
+    scoreBoard[1].innerHTML = `${finalScore}`;
+
+    if (highestScore < finalScore) {
+        highestScore = finalScore;
+    }
 
     if (bird) bird.remove();
 
@@ -13,4 +21,8 @@ function collide() {
     }
 
     document.getElementsByClassName("mask")[0].style.display = "block";
+    document.addEventListener("click", () => {
+        start();
+    })
 }
+
