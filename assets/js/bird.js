@@ -49,11 +49,14 @@ class Bird {
 const bird = new Bird();
 
 let birdTimerId = setInterval(() => {
-    birdAnimate = bird.start();
-    if (birdAnimate) {
-        collide();
-        clearInterval(creation);
-        clearInterval(birdTimerId);
+    if (isStarted) {
+        birdAnimate = bird.start();
+
+        if (birdAnimate) {
+            collide();
+            clearInterval(creation);
+            clearInterval(birdTimerId);
+        }
     }
 }, 20);
 

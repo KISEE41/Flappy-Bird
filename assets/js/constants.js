@@ -13,3 +13,7 @@ const maxHeightOfPipe = 250;
 
 const viewPortWidth = 864;
 const viewPortHeight = 512;
+
+var isStarted = false;
+
+var score = 0;

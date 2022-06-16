@@ -56,17 +56,21 @@ class Obstacle {
     }
 }
 
+
 const creation = setInterval(() => {
-    const pipe = new Obstacle();
-    let pipeMovement = setInterval(() => {
-        let isCollidedWithPipe = pipe.move();
-        if (isCollidedWithPipe) {
-            clearInterval(creation);
-            clearInterval(pipeMovement);
-            pipe.topPipe.remove();
-            pipe.downPipe.remove();
-            collide();
-        }
-    }, 35);
+    if (isStarted) {
+        const pipe = new Obstacle();
+        let pipeMovement = setInterval(() => {
+
+            let isCollidedWithPipe = pipe.move();
+            if (isCollidedWithPipe) {
+                clearInterval(creation);
+                clearInterval(pipeMovement);
+                pipe.topPipe.remove();
+                pipe.downPipe.remove();
+                collide();
+            }
+        }, 35);
+    }
 }, 2000);
 
