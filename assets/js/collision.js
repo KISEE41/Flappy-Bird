@@ -21,8 +21,5 @@ function collide() {
     }
 
     document.getElementsByClassName("mask")[0].style.display = "block";
-    document.addEventListener("click", () => {
-        start();
-    })
 }
 

@@ -42,7 +42,7 @@ class Obstacle {
 
     move() {
         this.position += 1;
-        if (this.position >= 100) {
+        if (this.position === 100) {
             this.topPipe.remove();
             this.downPipe.remove();
             this.position = 0;

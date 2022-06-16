@@ -33,15 +33,24 @@ class Bird {
     }
 
     jump() {
+        var counter = 0;
         if (this.position.y < 400) {
-            this.position.y += 50;
-        }
+            // this.position.y += 50;
 
-        this.birdImage.style.transform = "rotate(-50deg)";
-        setTimeout(() => {
-            this.birdImage.style.transform = "rotate(0)";
-        }, 100);
-        this.birdImage.style.bottom = `${toPx(this.position.y)}`;
+            this.birdImage.style.transform = "rotate(-50deg)";
+            setTimeout(() => {
+                this.birdImage.style.transform = "rotate(0)";
+            }, 100);
+            const upMove = setInterval(() => {
+                this.position.y += 5;
+                counter += 1;
+                this.birdImage.style.bottom = `${toPx(this.position.y)}`;
+                if (counter >= 15) {
+                    clearInterval(upMove);
+                }
+            }, 10);
+            // this.birdImage.style.bottom = `${toPx(this.position.y)}`;
+        }
     }
 
 }
